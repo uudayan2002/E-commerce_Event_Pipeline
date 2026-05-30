@@ -49,3 +49,8 @@ Thumbs.db
 handoff.md
 rag_evolution_architecture_review.md
 
+.antigravitycli/
+data
+.gitignore
+.env.example
+
