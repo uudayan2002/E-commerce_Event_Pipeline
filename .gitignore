@@ -50,7 +50,8 @@ handoff.md
 rag_evolution_architecture_review.md
 
 .antigravitycli/
-data
+data/
+graphify-out/
 .gitignore
 .env.example
 
