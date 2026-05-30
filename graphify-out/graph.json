@@ -1,0 +1,563 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "retail_pipeline_dag.py",
+      "file_type": "code",
+      "source_file": "dags\\retail_pipeline_dag.py",
+      "source_location": "L1",
+      "id": "dags_retail_pipeline_dag_py",
+      "community": 5,
+      "norm_label": "retail_pipeline_dag.py"
+    },
+    {
+      "label": "retail_etl.py",
+      "file_type": "code",
+      "source_file": "scripts\\retail_etl.py",
+      "source_location": "L1",
+      "id": "scripts_retail_etl_py",
+      "community": 0,
+      "norm_label": "retail_etl.py"
+    },
+    {
+      "label": "create_spark_session()",
+      "file_type": "code",
+      "source_file": "scripts\\retail_etl.py",
+      "source_location": "L12",
+      "id": "scripts_retail_etl_create_spark_session",
+      "community": 4,
+      "norm_label": "create_spark_session()"
+    },
+    {
+      "label": "extract_data()",
+      "file_type": "code",
+      "source_file": "scripts\\retail_etl.py",
+      "source_location": "L19",
+      "id": "scripts_retail_etl_extract_data",
+      "community": 0,
+      "norm_label": "extract_data()"
+    },
+    {
+      "label": "transform_data()",
+      "file_type": "code",
+      "source_file": "scripts\\retail_etl.py",
+      "source_location": "L35",
+      "id": "scripts_retail_etl_transform_data",
+      "community": 0,
+      "norm_label": "transform_data()"
+    },
+    {
+      "label": "load_data()",
+      "file_type": "code",
+      "source_file": "scripts\\retail_etl.py",
+      "source_location": "L73",
+      "id": "scripts_retail_etl_load_data",
+      "community": 0,
+      "norm_label": "load_data()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "scripts\\retail_etl.py",
+      "source_location": "L86",
+      "id": "scripts_retail_etl_main",
+      "community": 0,
+      "norm_label": "main()"
+    },
+    {
+      "label": "Initializes a Spark Session with JDBC driver support.",
+      "file_type": "rationale",
+      "source_file": "scripts\\retail_etl.py",
+      "source_location": "L13",
+      "id": "scripts_retail_etl_rationale_13",
+      "community": 4,
+      "norm_label": "initializes a spark session with jdbc driver support."
+    },
+    {
+      "label": "Reads the Excel file into a Spark DataFrame.     Note: For Excel, we use Pandas",
+      "file_type": "rationale",
+      "source_file": "scripts\\retail_etl.py",
+      "source_location": "L20",
+      "id": "scripts_retail_etl_rationale_20",
+      "community": 0,
+      "norm_label": "reads the excel file into a spark dataframe.     note: for excel, we use pandas"
+    },
+    {
+      "label": "Applies business logic and sanitation:     1. Rename columns to match Postgres",
+      "file_type": "rationale",
+      "source_file": "scripts\\retail_etl.py",
+      "source_location": "L36",
+      "id": "scripts_retail_etl_rationale_36",
+      "community": 0,
+      "norm_label": "applies business logic and sanitation:     1. rename columns to match postgres"
+    },
+    {
+      "label": "Writes Spark DataFrame to PostgreSQL using JDBC.",
+      "file_type": "rationale",
+      "source_file": "scripts\\retail_etl.py",
+      "source_location": "L74",
+      "id": "scripts_retail_etl_rationale_74",
+      "community": 0,
+      "norm_label": "writes spark dataframe to postgresql using jdbc."
+    },
+    {
+      "label": "E-commerce Event Pipeline",
+      "file_type": "document",
+      "source_file": "handoff.md",
+      "source_location": 1,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "handoff_ecommerce_event_pipeline",
+      "community": 1,
+      "norm_label": "e-commerce event pipeline"
+    },
+    {
+      "label": "generate_events.py",
+      "file_type": "code",
+      "source_file": "handoff.md",
+      "source_location": 17,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "handoff_generate_events_py",
+      "community": 1,
+      "norm_label": "generate_events.py"
+    },
+    {
+      "label": "Synthetic Data Generator",
+      "file_type": "concept",
+      "source_file": "handoff.md",
+      "source_location": 15,
+      "rationale": "We identified the need for a synthetic generator that doesn't just produce 'perfect' data, but includes 'dirty' data (duplicates, nulls, malformed timestamps) to test the robustness of the downstream pipeline.",
+      "id": "handoff_synthetic_data_generator",
+      "community": 1,
+      "norm_label": "synthetic data generator"
+    },
+    {
+      "label": "PostgreSQL",
+      "file_type": "concept",
+      "source_file": "handoff.md",
+      "source_location": 24,
+      "rationale": "Designed a multi-layered schema to support different stages of the data lifecycle.",
+      "id": "handoff_postgresql",
+      "community": 1,
+      "norm_label": "postgresql"
+    },
+    {
+      "label": "Apache Airflow",
+      "file_type": "concept",
+      "source_file": "handoff.md",
+      "source_location": 34,
+      "rationale": "Transitioned from manual scripts to an automated, modular orchestration model.",
+      "id": "handoff_apache_airflow",
+      "community": 3,
+      "norm_label": "apache airflow"
+    },
+    {
+      "label": "ecommerce_pipeline_dag.py",
+      "file_type": "code",
+      "source_file": "handoff.md",
+      "source_location": 39,
+      "id": "handoff_ecommerce_pipeline_dag_py",
+      "community": 3,
+      "norm_label": "ecommerce_pipeline_dag.py"
+    },
+    {
+      "label": "Docker Compose",
+      "file_type": "concept",
+      "source_file": "handoff.md",
+      "source_location": 40,
+      "id": "handoff_docker_compose",
+      "community": 1,
+      "norm_label": "docker compose"
+    },
+    {
+      "label": "Retail Transactional Intelligence Pipeline",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": 1,
+      "id": "readme_retail_transactional_intelligence_pipeline",
+      "community": 2,
+      "norm_label": "retail transactional intelligence pipeline"
+    },
+    {
+      "label": "The Data Swamp Crisis",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": 7,
+      "id": "readme_data_swamp_crisis",
+      "community": 2,
+      "norm_label": "the data swamp crisis"
+    },
+    {
+      "label": "Apache Spark (PySpark)",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": 24,
+      "rationale": "Moving past Pandas. Processing 1.06 million rows on a single machine is a memory risk. Spark provides distributed, in-memory processing. ensures that if the dataset grows to 100 million rows, the pipeline can scale horizontally across a cluster without code changes.",
+      "id": "readme_apache_spark",
+      "community": 2,
+      "norm_label": "apache spark (pyspark)"
+    },
+    {
+      "label": "Medallion-lite Architecture",
+      "file_type": "rationale",
+      "source_file": "README.md",
+      "source_location": 35,
+      "id": "readme_medallion_lite_architecture",
+      "community": 2,
+      "norm_label": "medallion-lite architecture"
+    },
+    {
+      "label": "online_retail_II.xlsx",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": 9,
+      "id": "readme_online_retail_ii_xlsx",
+      "community": 2,
+      "norm_label": "online_retail_ii.xlsx"
+    },
+    {
+      "label": "pyspark",
+      "file_type": "concept",
+      "source_file": "requirements.txt",
+      "source_location": 1,
+      "id": "requirements_pyspark",
+      "community": 2,
+      "norm_label": "pyspark"
+    },
+    {
+      "label": "pandas",
+      "file_type": "concept",
+      "source_file": "requirements.txt",
+      "source_location": 2,
+      "id": "requirements_pandas",
+      "community": 1,
+      "norm_label": "pandas"
+    },
+    {
+      "label": "apache-airflow",
+      "file_type": "concept",
+      "source_file": "requirements.txt",
+      "source_location": 6,
+      "id": "requirements_apache_airflow",
+      "community": 3,
+      "norm_label": "apache-airflow"
+    },
+    {
+      "label": "sqlalchemy",
+      "file_type": "concept",
+      "source_file": "requirements.txt",
+      "source_location": 5,
+      "id": "requirements_sqlalchemy",
+      "community": 6,
+      "norm_label": "sqlalchemy"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\retail_etl.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_src": "scripts_retail_etl_py",
+      "_tgt": "scripts_retail_etl_create_spark_session",
+      "source": "scripts_retail_etl_py",
+      "target": "scripts_retail_etl_create_spark_session",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\retail_etl.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_src": "scripts_retail_etl_py",
+      "_tgt": "scripts_retail_etl_extract_data",
+      "source": "scripts_retail_etl_py",
+      "target": "scripts_retail_etl_extract_data",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\retail_etl.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_src": "scripts_retail_etl_py",
+      "_tgt": "scripts_retail_etl_transform_data",
+      "source": "scripts_retail_etl_py",
+      "target": "scripts_retail_etl_transform_data",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\retail_etl.py",
+      "source_location": "L73",
+      "weight": 1.0,
+      "_src": "scripts_retail_etl_py",
+      "_tgt": "scripts_retail_etl_load_data",
+      "source": "scripts_retail_etl_py",
+      "target": "scripts_retail_etl_load_data",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\retail_etl.py",
+      "source_location": "L86",
+      "weight": 1.0,
+      "_src": "scripts_retail_etl_py",
+      "_tgt": "scripts_retail_etl_main",
+      "source": "scripts_retail_etl_py",
+      "target": "scripts_retail_etl_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\retail_etl.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_src": "scripts_retail_etl_rationale_13",
+      "_tgt": "scripts_retail_etl_create_spark_session",
+      "source": "scripts_retail_etl_create_spark_session",
+      "target": "scripts_retail_etl_rationale_13",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\retail_etl.py",
+      "source_location": "L93",
+      "weight": 1.0,
+      "_src": "scripts_retail_etl_main",
+      "_tgt": "scripts_retail_etl_extract_data",
+      "source": "scripts_retail_etl_extract_data",
+      "target": "scripts_retail_etl_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\retail_etl.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_src": "scripts_retail_etl_rationale_20",
+      "_tgt": "scripts_retail_etl_extract_data",
+      "source": "scripts_retail_etl_extract_data",
+      "target": "scripts_retail_etl_rationale_20",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\retail_etl.py",
+      "source_location": "L94",
+      "weight": 1.0,
+      "_src": "scripts_retail_etl_main",
+      "_tgt": "scripts_retail_etl_transform_data",
+      "source": "scripts_retail_etl_transform_data",
+      "target": "scripts_retail_etl_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\retail_etl.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_src": "scripts_retail_etl_rationale_36",
+      "_tgt": "scripts_retail_etl_transform_data",
+      "source": "scripts_retail_etl_transform_data",
+      "target": "scripts_retail_etl_rationale_36",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\retail_etl.py",
+      "source_location": "L97",
+      "weight": 1.0,
+      "_src": "scripts_retail_etl_main",
+      "_tgt": "scripts_retail_etl_load_data",
+      "source": "scripts_retail_etl_load_data",
+      "target": "scripts_retail_etl_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\retail_etl.py",
+      "source_location": "L74",
+      "weight": 1.0,
+      "_src": "scripts_retail_etl_rationale_74",
+      "_tgt": "scripts_retail_etl_load_data",
+      "source": "scripts_retail_etl_load_data",
+      "target": "scripts_retail_etl_rationale_74",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "handoff.md",
+      "weight": 1.0,
+      "_src": "handoff_ecommerce_event_pipeline",
+      "_tgt": "handoff_generate_events_py",
+      "source": "handoff_ecommerce_event_pipeline",
+      "target": "handoff_generate_events_py"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "handoff.md",
+      "weight": 1.0,
+      "_src": "handoff_ecommerce_event_pipeline",
+      "_tgt": "handoff_postgresql",
+      "source": "handoff_ecommerce_event_pipeline",
+      "target": "handoff_postgresql"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "handoff.md",
+      "weight": 1.0,
+      "_src": "handoff_ecommerce_event_pipeline",
+      "_tgt": "handoff_apache_airflow",
+      "source": "handoff_ecommerce_event_pipeline",
+      "target": "handoff_apache_airflow"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "handoff.md",
+      "weight": 1.0,
+      "_src": "handoff_ecommerce_event_pipeline",
+      "_tgt": "handoff_docker_compose",
+      "source": "handoff_ecommerce_event_pipeline",
+      "target": "handoff_docker_compose"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "README.md",
+      "weight": 1.0,
+      "_src": "readme_retail_transactional_intelligence_pipeline",
+      "_tgt": "handoff_ecommerce_event_pipeline",
+      "source": "handoff_ecommerce_event_pipeline",
+      "target": "readme_retail_transactional_intelligence_pipeline"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "requirements.txt",
+      "weight": 1.0,
+      "_src": "requirements_pandas",
+      "_tgt": "handoff_ecommerce_event_pipeline",
+      "source": "handoff_ecommerce_event_pipeline",
+      "target": "requirements_pandas"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "handoff.md",
+      "weight": 1.0,
+      "_src": "handoff_generate_events_py",
+      "_tgt": "handoff_synthetic_data_generator",
+      "source": "handoff_generate_events_py",
+      "target": "handoff_synthetic_data_generator"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "handoff.md",
+      "weight": 1.0,
+      "_src": "handoff_apache_airflow",
+      "_tgt": "handoff_ecommerce_pipeline_dag_py",
+      "source": "handoff_apache_airflow",
+      "target": "handoff_ecommerce_pipeline_dag_py"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "requirements.txt",
+      "weight": 1.0,
+      "_src": "requirements_apache_airflow",
+      "_tgt": "handoff_apache_airflow",
+      "source": "handoff_apache_airflow",
+      "target": "requirements_apache_airflow"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "weight": 1.0,
+      "_src": "readme_retail_transactional_intelligence_pipeline",
+      "_tgt": "readme_apache_spark",
+      "source": "readme_retail_transactional_intelligence_pipeline",
+      "target": "readme_apache_spark"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "weight": 1.0,
+      "_src": "readme_retail_transactional_intelligence_pipeline",
+      "_tgt": "readme_medallion_lite_architecture",
+      "source": "readme_retail_transactional_intelligence_pipeline",
+      "target": "readme_medallion_lite_architecture"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "weight": 1.0,
+      "_src": "readme_retail_transactional_intelligence_pipeline",
+      "_tgt": "readme_data_swamp_crisis",
+      "source": "readme_retail_transactional_intelligence_pipeline",
+      "target": "readme_data_swamp_crisis"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "weight": 1.0,
+      "_src": "readme_retail_transactional_intelligence_pipeline",
+      "_tgt": "readme_online_retail_ii_xlsx",
+      "source": "readme_retail_transactional_intelligence_pipeline",
+      "target": "readme_online_retail_ii_xlsx"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "requirements.txt",
+      "weight": 1.0,
+      "_src": "requirements_pyspark",
+      "_tgt": "readme_apache_spark",
+      "source": "readme_apache_spark",
+      "target": "requirements_pyspark"
+    }
+  ],
+  "hyperedges": []
+}

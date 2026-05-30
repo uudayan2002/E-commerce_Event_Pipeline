@@ -1,0 +1,51 @@
+# ============================================================================
+# Git Ignore Configuration for E-commerce Event Pipeline
+# ============================================================================
+
+# 1. Environment Secrets (Must NEVER be committed to Git!)
+.env
+
+# 2. Python bytecode & cache files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+
+# 3. Airflow run-time state, logs & SQLite DB
+logs/
+airflow.db
+airflow-webserver.pid
+standalone_admin_password.txt
+
+# 4. PySpark & local Spark run-time outputs
+spark-warehouse/
+metastore_db/
+derby.log
+.ipynb_checkpoints/
+
+# 5. Virtual environments & dependency caches
+.venv/
+venv/
+env/
+dist/
+build/
+*.egg-info/
+
+# 6. IDE configurations
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# 7. OS temp files
+.DS_Store
+Thumbs.db
+
+
+handoff.md
+rag_evolution_architecture_review.md
+

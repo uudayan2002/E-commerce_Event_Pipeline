@@ -1,0 +1,7 @@
+pyspark
+pandas
+openpyxl
+psycopg2-binary
+sqlalchemy
+apache-airflow
+python-json-logger
